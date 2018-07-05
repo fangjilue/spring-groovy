@@ -76,6 +76,21 @@ public class AppTest {
     }
 
 
+    @Test
+    public void testDoDB()  throws Exception {
+        ResultActions actions =
+                mvc.perform(MockMvcRequestBuilders.get("/db")
+                        .param("param","age")
+                        .accept(MediaType.APPLICATION_JSON_UTF8_VALUE)).andDo(new ResultHandler() {
+                    @Override
+                    public void handle(MvcResult result) throws Exception {
+                        System.out.println(result.getResponse().getContentAsString());
+                    }
+                });
+        //.andExpect(MockMvcResultMatchers.status().isOk())
+        //.andExpect(MockMvcResultMatchers.content().string("Hello World!"));
+    }
+
     /*@Test
     public void testDoNot() throws Exception{
         //必须提交启动应用

@@ -37,12 +37,12 @@ public class RuleTemplateDao {
             "        println(param)\n" +
             "\n" +
             "        if(param.getParam() == null){\n" +
-            "            return RuleResult.getError(\"param is null\")\n" +
+            "            return RuleResult.getError(\"param is null by string\")\n" +
             "        }\n" +
             "\n" +
             "        ValidateRoomParam roomParam = param.getParam()\n" +
             "\n" +
-            "        roomService.exist(roomParam.getCount()) ? RuleResult.getError(\"room count error\") : RuleResult.getSuccess()\n" +
+            "        roomService.exist(roomParam.getCount()) ? RuleResult.getError(\"room count error\") : RuleResult.getSuccess(\"by string\")\n" +
             "    }\n" +
             "\n" +
             "}\n";
@@ -66,12 +66,12 @@ public class RuleTemplateDao {
             "        println(param)\n" +
             "\n" +
             "        if(param.getParam() == null){\n" +
-            "            return RuleResult.getError(\"param is null\")\n" +
+            "            return RuleResult.getError(\"param is null by string\")\n" +
             "        }\n" +
             "\n" +
             "        ValidateAgeParam ageParam = param.getParam()\n" +
             "\n" +
-            "        ageParam.getAge()< 18 ? RuleResult.getError(\"age < 18\") : RuleResult.getSuccess()\n" +
+            "        ageParam.getAge()< 18 ? RuleResult.getError(\"age < 18 by string\") : RuleResult.getSuccess(\"by string\")\n" +
             "    }\n" +
             "\n" +
             "}\n";

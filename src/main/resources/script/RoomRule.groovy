@@ -20,12 +20,12 @@ class RoomRule implements RuleEngine<ValidateRoomParam> {
         println("RoomRule roomService =" + roomService)
 
         if(param.getParam() == null){
-            return RuleResult.getError("param is null")
+            return RuleResult.getError("param is null by local")
         }
 
         ValidateRoomParam roomParam = param.getParam()
 
-        roomService.exist(roomParam.getCount()) ? RuleResult.getError("room count error") : RuleResult.getSuccess()
+        roomService.exist(roomParam.getCount()) ? RuleResult.getError("room count error by local") : RuleResult.getSuccess("count%2==0 by local")
     }
 
 }
