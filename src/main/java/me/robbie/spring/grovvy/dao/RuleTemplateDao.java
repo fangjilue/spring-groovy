@@ -2,6 +2,8 @@ package me.robbie.spring.grovvy.dao;
 
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.PreDestroy;
+
 /**
  * <一句话功能简述>
  * <功能详细描述>
@@ -80,5 +82,10 @@ public class RuleTemplateDao {
         //查询数据库获取模板
 
         return "age".equals(id) ? AGE : ROOM;
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("RuleTemplateDao destroy");
     }
 }

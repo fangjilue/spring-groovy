@@ -242,7 +242,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.5.4.RELEASE</version>
-<!--                <configuration>
+                <!--<configuration>
                     <mainClass>me.robbie.spring.grovvy.Run</mainClass>
                     <layout>ZIP</layout>
                 </configuration>-->

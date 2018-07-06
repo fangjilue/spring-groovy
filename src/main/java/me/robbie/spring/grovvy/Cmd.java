@@ -5,6 +5,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 /**
@@ -29,5 +30,10 @@ public class Cmd implements CommandLineRunner, ApplicationRunner {
         for (String name : args.getOptionNames()) {
             System.out.println("name=" + name + ",value=" + args.getOptionValues(name));
         }
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("Cmd destroy");
     }
 }

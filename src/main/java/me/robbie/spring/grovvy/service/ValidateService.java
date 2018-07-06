@@ -7,6 +7,8 @@ import me.robbie.spring.grovvy.script.RuleEngineFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PreDestroy;
+
 /**
  * <一句话功能简述>
  * <功能详细描述>
@@ -37,5 +39,10 @@ public class ValidateService {
             e.printStackTrace();
             return RuleResult.getError("执行规则异常");
         }
+    }
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("ValidateService destroy");
     }
 }

@@ -2,6 +2,8 @@ package me.robbie.spring.grovvy.service;
 
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PreDestroy;
+
 /**
  * <一句话功能简述>
  * <功能详细描述>
@@ -17,5 +19,11 @@ public class RoomService {
 
     public boolean exist(int count) {
         return count%2 ==0;
+    }
+
+
+    @PreDestroy
+    public void destroy(){
+        System.out.println("RoomService destroy");
     }
 }

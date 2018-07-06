@@ -110,5 +110,6 @@ public class RuleEngineFactory implements ApplicationContextAware {
     public void destroy(){
         classMap.clear();
         gcl.clearCache();
+        System.out.println("RuleEngineFactory destroy");
     }
 }
