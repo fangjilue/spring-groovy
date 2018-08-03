@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -18,12 +17,10 @@ import org.springframework.test.web.servlet.ResultHandler;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.WebApplicationContext;
 
 /**
- * @RunWith(SpringRunner.class) 等价于
- * @RunWith(SpringJUnit4ClassRunner.class)
+ * mock 方式测试controller
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Run.class)
@@ -93,7 +90,6 @@ public class AppTest {
 
     /*@Test
     public void testDoNot() throws Exception{
-        //必须提交启动应用
         ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:8080/net",String.class);
         System.out.println(entity.getBody());
     }*/

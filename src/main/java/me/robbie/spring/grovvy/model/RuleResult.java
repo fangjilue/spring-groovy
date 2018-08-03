@@ -66,4 +66,13 @@ public class RuleResult implements Serializable {
         result.setMsg(msg);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "RuleResult{" +
+                "success=" + success +
+                ", code='" + code + '\'' +
+                ", msg='" + msg + '\'' +
+                '}';
+    }
 }
